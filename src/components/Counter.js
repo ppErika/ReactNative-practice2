@@ -15,9 +15,15 @@ const Counter = () => {
       <Button
         title="+"
         onPress={() => {
-          setCount(count + 1);
-          setCount(count + 1);
-          // 자꾸 이전 값이 출력되는 문제 발생
+          // setCount에 함수를 전달해서 상태변수의 현재 값을 조절함으로써 해결
+          setCount((count) => {
+            console.log('prev 1: ', count);
+            return count + 1;
+          });
+          setCount((count) => {
+            console.log('prev 2: ', count);
+            return count + 1;
+          });
           console.log(count);
         }}
       />
