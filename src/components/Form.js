@@ -21,7 +21,7 @@ const Form = () => {
 
   useEffect(() => {
     console.log(`name: ${name}, email: ${email}`);
-  });
+  }, [email]);
 
   return (
     <>
