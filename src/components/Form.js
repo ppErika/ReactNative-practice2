@@ -20,6 +20,11 @@ const Form = () => {
   let count = 0;
 
   useEffect(() => {
+    console.log('=-=-=-=-= Mount =-=-=-=-=');
+    return () => console.log('=-=-=-=-= UnMount =-=-=-=-=-=');
+  }, []);
+
+  useEffect(() => {
     console.log(`name: ${name}, email: ${email}`);
   }, [email]);
 
